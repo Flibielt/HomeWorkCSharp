@@ -2,7 +2,7 @@
 {
     class DirectionMethods : IDirectionMethods
     {
-        public Direction RevertDirection(Direction direction)
+        public static Direction RevertDirection(Direction direction)
         {
             if (direction == Direction.Left)
             {
