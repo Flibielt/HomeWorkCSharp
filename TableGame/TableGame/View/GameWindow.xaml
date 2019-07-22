@@ -5,8 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TableGame.View"
         mc:Ignorable="d"
-        Title="GameWindow" Height="450" Width="800">
+        Title="Game" Height="450" Width="800">
     <Grid>
-        
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="_Game">
+                    <MenuItem Header="_Save game" Click="MenuItem_Click_1" />
+                    <MenuItem Header="_Exit game" />
+                </MenuItem>
+                <MenuItem Header="_Help" Click="MenuItemHelp_Click" />
+            </Menu>
+
+            <Grid>
+                
+            </Grid>
+        </DockPanel>
     </Grid>
 </Window>

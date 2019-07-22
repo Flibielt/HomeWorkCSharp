@@ -15,24 +15,18 @@ using System.Windows.Shapes;
 namespace TableGame.View
 {
     /// <summary>
-    /// Interaction logic for GameWindow.xaml
+    /// Interaction logic for HelpWindow.xaml
     /// </summary>
-    public partial class GameWindow : Window
+    public partial class HelpWindow : Window
     {
-        public GameWindow()
+        public HelpWindow()
         {
             InitializeComponent();
         }
 
-        private void MenuItemHelp_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            HelpWindow helpWindow = new HelpWindow();
-            helpWindow.Show();
-        }
-
-        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
-        {
-
+            this.Close();
         }
     }
 }
