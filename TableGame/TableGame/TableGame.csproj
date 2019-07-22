@@ -58,6 +58,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModel\Game.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -75,7 +76,7 @@
     <Compile Include="Model\Direction.cs" />
     <Compile Include="Model\DirectionMethods.cs" />
     <Compile Include="Model\FileOperation.cs" />
-    <Compile Include="Model\GameState.cs" />
+    <Compile Include="Model\PlayerState.cs" />
     <Compile Include="Model\IDirectionMethods.cs" />
     <Compile Include="Model\Table.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -105,7 +106,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ViewModel\" />
     <Folder Include="View\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

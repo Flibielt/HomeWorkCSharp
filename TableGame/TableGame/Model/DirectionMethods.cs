@@ -1,6 +1,6 @@
 ﻿namespace TableGame.Model
 {
-    class DirectionMethods : IDirectionMethods
+    class DirectionMethods
     {
         public static Direction RevertDirection(Direction direction)
         {

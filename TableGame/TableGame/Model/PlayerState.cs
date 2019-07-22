@@ -2,14 +2,14 @@
 
 namespace TableGame.Model
 {
-    class GameState
+    class PlayerState
     {
         private int[] position;
         private Direction forbiddenDirection;
         private string name;
         private int steps;
 
-        public GameState()
+        public PlayerState()
         {
             position = new int[2];
             forbiddenDirection = Direction.Left;
@@ -38,6 +38,24 @@ namespace TableGame.Model
             get
             {
                 return steps;
+            }
+        }
+
+        public int GetRow()
+        {
+            return position[0];
+        }
+
+        public int GetCol()
+        {
+            return position[1];
+        }
+
+        public Direction ForbiddenDirection
+        {
+            get
+            {
+                return forbiddenDirection;
             }
         }
 
@@ -70,16 +88,22 @@ namespace TableGame.Model
 
         private void setRow(Direction direction, int distance)
         {
-            position[0] += distance;
-            forbiddenDirection = DirectionMethods.RevertDirection(direction);
-            steps++;
+            if (position[0] + distance < 8 && position[0] + distance >= 0)
+            {
+                position[0] += distance;
+                forbiddenDirection = DirectionMethods.RevertDirection(direction);
+                steps++;
+            }
         }
 
         private void setCol(Direction direction, int distance)
         {
-            position[1] += distance;
-            forbiddenDirection = DirectionMethods.RevertDirection(direction);
-            steps++;
+            if (position[1] + distance < 8 && position[1] + distance >= 0)
+            {
+                position[1] += distance;
+                forbiddenDirection = DirectionMethods.RevertDirection(direction);
+                steps++;
+            }
         }
     }
 }
