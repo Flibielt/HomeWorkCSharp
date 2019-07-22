@@ -1,17 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
+
+using TableGame.ViewModel;
+using TableGame.View;
 
 namespace TableGame
 {
@@ -23,6 +13,23 @@ namespace TableGame
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        public string PlayerName { get; set; }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Game game = Game.GetGame();
+
+            DataContext = this;
+            string playerName = PlayerName;
+            if (playerName.Length != 0)
+            {
+                game.Name = playerName;
+                GameWindow gameWindow = new GameWindow();
+                gameWindow.Show();
+                this.Close();
+            }
         }
     }
 }

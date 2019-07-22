@@ -11,11 +11,22 @@ namespace TableGame.ViewModel
     {
         private Table table;
         private PlayerState playerState;
+        private static Game game;
 
         public Game()
         {
             table = new Table();
             playerState = new PlayerState();
+        }
+
+        public static Game GetGame()
+        {
+            if (game is null)
+            {
+                game = new Game();
+            }
+
+            return game;
         }
 
         public bool IsGoal()

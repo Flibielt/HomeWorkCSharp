@@ -7,6 +7,16 @@
         mc:Ignorable="d"
         Title="Table Game" Height="450" Width="800">
     <Grid>
-        
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Text="Name: " FontSize="20"></TextBlock>
+                <TextBox MinWidth="90" FontSize="20" Text="{Binding PlayerName}"></TextBox>
+            </WrapPanel>
+            <Button Click="Button_Click" Margin="10" FontSize="20">
+                <Button.Content>Start game</Button.Content>
+                <Button.Height>40</Button.Height>
+                <Button.Width>120</Button.Width>
+            </Button>
+        </StackPanel>
     </Grid>
 </Window>
